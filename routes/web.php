@@ -54,3 +54,7 @@ Route::get('/items', function(){
 Route::get('/items/create', function(){
     return view('layouts.items.create');
 });
+
+Route::get('/posts/create', 'PostController@create');
+
+Route::post('/posts', 'PostController@store');
