@@ -11,9 +11,19 @@
 |
 */
 
+// Route::get('/', function () {
+//     // return view('welcome');
+//     return view('index');
+// });
+
 Route::get('/', function () {
     // return view('welcome');
-    return view('index');
+    return view('layouts.items.index');
+});
+
+Route::get('/data-tables', function () {
+    // return view('welcome');
+    return view('layouts.items.data-tables');
 });
 
 Route::get('/coba/{nama}', function ($nama) {
@@ -32,3 +42,15 @@ Route::get('/perkenalan', 'PerkenalanController@halo');
 Route::get('/register', 'AuthController@register');
 
 Route::post('/welcome', 'AuthController@welcome');
+
+Route::get('/master', function(){
+    return view('layouts.master');
+});
+
+Route::get('/items', function(){
+    return view('layouts.items.index');
+});
+
+Route::get('/items/create', function(){
+    return view('layouts.items.create');
+});
